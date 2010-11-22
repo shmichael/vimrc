@@ -94,7 +94,7 @@ nmap <silent> <C-N> :silent noh<CR>
 nmap <C-6> :b#<CR>
 
 " Ctrl-P to Display the file browser tree
-nmap <C-P> :NERDTreeToggle<CR>:set number<CR>:set nonumber<CR>
+nmap <C-P> :NERDTreeToggle<CR>
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
 
@@ -181,8 +181,20 @@ inoremap <silent> <F3> <ESC>:YRShow<cr>
 nmap <leader>e :CommandT<CR>
 nmap <leader>E :CommandTFlush<CR>
 
-"set relativenumber
+" insert blank lines staying in normal mode
+nmap <leader>o :put=''<CR>
+nmap <leader>O :put!=''
+
+" set relativenumber
 set colorcolumn=85
 set undofile            " Create an unfo files to undos work across closes
+
+" tabs to spaces
 set bs=2
 set sw=2
+
+set background=dark
+colorscheme darkdevel
+
+" fix backspace not deleting lines
+set backspace=indent,eol,start
